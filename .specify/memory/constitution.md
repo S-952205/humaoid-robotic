@@ -1,55 +1,55 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: None (initial creation) -> 1.0.0
+Modified principles: None
+Added sections: Constraints, Success Criteria
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md: ✅ updated (Constitution Check section should align with new principles)
+- .specify/templates/spec-template.md: ✅ updated (Scope/requirements alignment)
+- .specify/templates/tasks-template.md: ✅ updated (Task categorization reflects new principles)
+- .specify/templates/commands/sp.phr.md: ⚠ pending (Default PHR template used as sp.phr.md does not exist)
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Course Book Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Beginner-friendly English
+All content must be written in clear, concise, and beginner-friendly English, avoiding overly technical jargon where possible.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Simulation-first
+The book prioritizes simulation-based learning using ROS 2, Gazebo, NVIDIA Isaac, and VLA (Vision-Language-Action models) for practical examples.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Practical Code Examples and Diagrams
+Each chapter must include practical, working code examples and illustrative diagrams to aid understanding.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Accurate, Verified Technical Content
+All technical content, including code and explanations, must be accurate and thoroughly verified.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Docusaurus-compatible Markdown
+The entire book must be authored in Markdown compatible with Docusaurus for seamless deployment and rendering.
 
-### [PRINCIPLE_6_NAME]
+### Clear Chapter Structure
+Chapters should have a clear, logical, and easy-to-navigate structure.
 
+## Constraints
 
-[PRINCIPLE__DESCRIPTION]
+*   No hardware assembly required for examples or exercises.
+*   No advanced mathematical concepts are assumed or required.
+*   All robotics examples and discussions must exclusively use ROS 2.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Success Criteria
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+*   The complete book must be deployable on GitHub Pages.
+*   The book must be clear, accurate, and easy to navigate for readers.
+*   All simulation code examples provided must be working and verifiable.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other project practices.
+Amendments require documentation, approval, and a migration plan.
+All pull requests and reviews must verify compliance with these principles.
+Complexity must be justified and adhere to the principle of smallest viable change.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-05 | **Last Amended**: 2025-12-05
