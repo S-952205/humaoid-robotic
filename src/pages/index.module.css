@@ -201,6 +201,25 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Light Theme Overrides to fix text visibility */
+[data-theme='light'] .heroContent h1,
+[data-theme='light'] .feature h3,
+[data-theme='light'] .modules h2 {
+  color: #111827 !important; /* Adding !important to ensure override */
+}
+
+[data-theme='light'] .description,
+[data-theme='light'] .feature p,
+[data-theme='light'] .duration,
+[data-theme='light'] .moduleCard p {
+  color: #6b7280 !important;
+}
+
+[data-theme='light'] .subtitle,
+[data-theme='light'] .moduleCard h4 {
+  color: #2563eb !important;
+}
+
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
