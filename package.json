@@ -12,15 +12,12 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "server": "ts-node server.ts",
-    "dev": "concurrently \"npm run start\" \"npm run server\""
+    "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
     "@docusaurus/core": "3.2.1",
     "@docusaurus/preset-classic": "3.2.1",
     "@mdx-js/react": "^3.0.0",
-    "better-auth": "^0.16.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
@@ -30,17 +27,7 @@
     "@docusaurus/module-type-aliases": "3.2.1",
     "@docusaurus/tsconfig": "3.2.1",
     "@docusaurus/types": "3.2.1",
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.10.0",
-    "concurrently": "^8.2.2",
-    "ts-node": "^10.9.1",
     "typescript": "~5.2.2"
-  },
-  "optionalDependencies": {
-    "axios": "^1.6.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2"
   },
   "browserslist": {
     "production": [
