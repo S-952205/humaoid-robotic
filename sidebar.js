@@ -10,6 +10,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
+    'intro',
     {
       type: 'category',
       label: 'Module 1: Physical AI & Humanoid Basics',

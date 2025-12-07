@@ -38,9 +38,14 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Syed-Sufyan/humanoid-robot-book/tree/main/',
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo. For example: https://github.com/facebook/docusaurus
+          editUrl:
+            'https://github.com/Syed-Sufyan/humanoid-robot-book/tree/main/',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -56,7 +61,7 @@ const config = {
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Humanoid Robotics Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -67,8 +72,18 @@ const config = {
             label: 'Course Book',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            to: '/blog',
+            label: 'Blogs',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/Syed-Sufyan/humanoid-robot-book',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            to: '/auth',
+            label: 'Sign In',
             position: 'right',
           },
         ],

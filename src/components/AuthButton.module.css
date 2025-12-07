@@ -1,0 +1,169 @@
+.authButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.authButton {
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.authButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.userMenuContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userButton {
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+}
+
+.userButton:hover {
+  border-color: #2563eb;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  margin-top: 0.5rem;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.userInfo {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.avatarLarge {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+}
+
+.userName {
+  margin: 0;
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.userEmail {
+  margin: 0.25rem 0 0 0;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #374151;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdownItem:hover {
+  background: #f9fafb;
+  color: #2563eb;
+}
+
+.dropdownItem:last-of-type {
+  border-bottom: none;
+}
+
+.signOutButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #fee2e2;
+  border: none;
+  cursor: pointer;
+  color: #991b1b;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.signOutButton:hover {
+  background: #fecaca;
+}
+
+@media (prefers-color-scheme: dark) {
+  .authButton {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  }
+
+  .userButton {
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+
+  .userButton:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: #3b82f6;
+  }
+
+  .dropdown {
+    background: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .dropdownItem {
+    color: #e5e7eb;
+    border-bottom-color: #374151;
+  }
+
+  .dropdownItem:hover {
+    background: #111827;
+    color: #3b82f6;
+  }
+
+  .signOutButton {
+    background: #7f1d1d;
+    color: #fecaca;
+  }
+
+  .signOutButton:hover {
+    background: #991b1b;
+  }
+}

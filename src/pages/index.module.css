@@ -1,0 +1,280 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  max-width: 500px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.buttonPrimary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.buttonPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.buttonSecondary {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.buttonSecondary:hover {
+  background: #f0f9ff;
+  transform: translateY(-2px);
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage svg {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-top: 4rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.feature p {
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.modules {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.modules h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 3rem;
+}
+
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.moduleCard {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+  transition: all 0.3s;
+}
+
+.moduleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+}
+
+.moduleCard h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.moduleCard p {
+  margin: 0.5rem 0;
+  color: #374151;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 1rem !important;
+}
+
+.cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  margin-top: 4rem;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modules h2,
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .heroContent h1 {
+    color: #f3f4f6;
+  }
+
+  .description {
+    color: #d1d5db;
+  }
+
+  .features {
+    background: #111827;
+  }
+
+  .feature h3 {
+    color: #f3f4f6;
+  }
+
+  .feature p {
+    color: #d1d5db;
+  }
+
+  .modules h2 {
+    color: #f3f4f6;
+  }
+
+  .moduleCard {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-left-color: #3b82f6;
+  }
+
+  .moduleCard h4 {
+    color: #3b82f6;
+  }
+
+  .moduleCard p {
+    color: #e5e7eb;
+  }
+
+  .cta h2 {
+    color: white;
+  }
+}
