@@ -95,28 +95,43 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
     setError(null);
     try {
-      // Simulate OAuth login - in a real app, this would redirect to OAuth provider
-      // For this demo, we'll create a mock user with OAuth provider info
-      const providerName = provider === 'google' ? 'Google' : 'GitHub';
-      const newUser: User = {
-        id: `${provider}_${Date.now()}`,
-        email: `user-${Date.now()}@${provider}.local`,
-        name: `${providerName} User`,
-        image: `https://i.pravatar.cc/150?u=${provider}_${Date.now()}@${provider}.local`,
-      };
+      if (provider === 'google') {
+        // Google OAuth Configuration
+        const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+        const redirectUri = `${window.location.origin}/humanoid-robot-book/auth/callback`;
+        const scope = 'openid profile email';
+        const responseType = 'code';
+        const state = Math.random().toString(36).substring(7);
 
-      setUser(newUser);
-      localStorage.setItem('user', JSON.stringify(newUser));
+        // Store state for CSRF protection
+        sessionStorage.setItem('oauth_state', state);
 
-      // Redirect after successful OAuth login
-      setTimeout(() => {
-        window.location.href = '/humanoid-robot-book/';
-      }, 1000);
+        if (!clientId) {
+          throw new Error('Google OAuth Client ID not configured. Please set REACT_APP_GOOGLE_CLIENT_ID environment variable.');
+        }
+
+        const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=${responseType}&scope=${encodeURIComponent(scope)}&state=${state}`;
+        window.location.href = googleAuthUrl;
+      } else if (provider === 'github') {
+        // GitHub OAuth Configuration
+        const clientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+        const redirectUri = `${window.location.origin}/humanoid-robot-book/auth/callback`;
+        const scope = 'user:email';
+        const state = Math.random().toString(36).substring(7);
+
+        // Store state for CSRF protection
+        sessionStorage.setItem('oauth_state', state);
+
+        if (!clientId) {
+          throw new Error('GitHub OAuth Client ID not configured. Please set REACT_APP_GITHUB_CLIENT_ID environment variable.');
+        }
+
+        const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}&state=${state}`;
+        window.location.href = githubAuthUrl;
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : `Failed to sign in with ${provider}`;
       setError(message);
-      throw err;
-    } finally {
       setIsLoading(false);
     }
   }, []);

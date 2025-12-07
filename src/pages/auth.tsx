@@ -14,6 +14,8 @@ export default function AuthPage(): JSX.Element {
 
   const handleOAuthLogin = async (provider: 'google' | 'github') => {
     try {
+      // Store provider info for callback page
+      sessionStorage.setItem('oauth_provider', provider);
       await signInWithOAuth(provider);
     } catch (err) {
       console.error(`${provider} OAuth failed:`, err);
