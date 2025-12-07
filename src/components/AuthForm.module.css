@@ -1,0 +1,261 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.authCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.authCard h1 {
+  font-size: 2rem;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  color: #2563eb;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.formGroup input {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.formGroup input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.toggle {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #6b7280;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.toggleButton:hover {
+  color: #1d4ed8;
+}
+
+.divider {
+  text-align: center;
+  color: #9ca3af;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: auto;
+}
+
+.divider {
+  position: relative;
+  z-index: 1;
+}
+
+.divider::after {
+  content: attr(data-text);
+  background: white;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.socialButton {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.socialButton:hover:not(:disabled) {
+  border-color: #2563eb;
+  background: #f0f9ff;
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.socialButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.socialButton span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .authCard {
+    padding: 1.5rem;
+  }
+
+  .authCard h1 {
+    font-size: 1.5rem;
+  }
+
+  .socialButtons {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .authContainer {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  .authCard {
+    background: #1f2937;
+    color: #f3f4f6;
+  }
+
+  .authCard h1 {
+    color: #f3f4f6;
+  }
+
+  .formGroup label {
+    color: #d1d5db;
+  }
+
+  .formGroup input {
+    background: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+
+  .formGroup input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .submitButton:hover:not(:disabled) {
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .error {
+    background: #7f1d1d;
+    color: #fecaca;
+  }
+
+  .toggle {
+    color: #9ca3af;
+  }
+
+  .divider::before {
+    background: #374151;
+  }
+
+  .socialButton {
+    border-color: #374151;
+    background: #111827;
+    color: #f3f4f6;
+  }
+
+  .socialButton:hover:not(:disabled) {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+  }
+}
