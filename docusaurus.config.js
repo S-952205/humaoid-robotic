@@ -81,11 +81,6 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-          {
-            to: '/auth',
-            label: 'Sign In',
-            position: 'right',
-          },
         ],
       },
       footer: {
