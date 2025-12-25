@@ -1,3 +1,4 @@
+
 import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -28,6 +29,9 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+  ],
+
   presets: [
     [
       'classic',
@@ -47,7 +51,7 @@ const config = {
             'https://github.com/Syed-Sufyan/humanoid-robot-book/tree/main/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css', './src/css/tailwind.css'],
         },
       }),
     ],
