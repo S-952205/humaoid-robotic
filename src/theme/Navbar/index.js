@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarLayout from '@theme/Navbar/Layout';
 import NavbarContent from '@theme/Navbar/Content';
 
-// Simple navbar override to ensure proper structure for client-side auth updates
+// Basic navbar override to maintain Docusaurus theme structure
 const CustomNavbar = (props) => {
   return (
     <NavbarLayout>
