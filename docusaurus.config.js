@@ -6,6 +6,10 @@ const config = {
   title: 'Physical AI & Humanoid Robotics Course Book',
   tagline: 'Learn Physical AI and Humanoid Robotics with ROS 2, Simulation, and VLA Models',
   favicon: 'img/favicon.ico',
+  // Custom fields for backend configuration
+  customFields: {
+    backendUrl: process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000',
+  },
 
   // Set the production url of your site here
   url: 'https://Syed-Sufyan.github.io',

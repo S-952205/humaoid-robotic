@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distPath": "build"
+      }
+    },
+    {
+      "src": "backend/main.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.11"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/chat/(.*)",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/crawl",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/query",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/health",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/metrics",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/monitoring/status",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/stats",
+      "dest": "/backend/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
