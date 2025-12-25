@@ -1,0 +1,25 @@
+[project]
+name = "rag-chatbot-docusaurus"
+version = "0.1.0"
+description = "Custom RAG Chatbot for Deployed Docusaurus Book"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+    "cohere>=5.5.3",
+    "qdrant-client>=1.8.0",
+    "google-generativeai>=0.4.0",
+    "openai-agents>=0.1.0",
+    "beautifulsoup4>=4.12.2",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "pydantic>=2.5.0",
+    "tiktoken>=0.5.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+]
