@@ -33,7 +33,7 @@ This documentation covers the implementation of the floating chat widget with Ne
 - Save a chat message to the history database
 - Validates message content and session_id
 
-### GET /chat/history/{session_id}
+### GET /chat/history/{`session_id`}
 - Retrieve chat history for a specific session
 - Supports pagination with limit and offset parameters
 
