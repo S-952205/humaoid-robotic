@@ -1,0 +1,1 @@
+# This file makes the contract tests directory a Python package
