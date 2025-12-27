@@ -2,31 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "build/**/*",
-      "use": "@vercel/static"
-    },
-    {
       "src": "backend/main.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.11",
-        "includeFiles": ["backend/**/*"]
+        "runtime": "python3.11"
       }
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "/backend/main.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/$1",
-      "check": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/index.html"
     }
   ]
 }

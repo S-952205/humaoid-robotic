@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './ChatWidget.css';
 
 const ChatWidget = ({
-  backendUrl = 'http://localhost:8000',
+  backendUrl = 'https://sufyanalisyed-deploy-robotics-book.hf.space',
   initialOpen = false,
   position = 'bottom-right'
 }) => {
@@ -67,7 +67,7 @@ const ChatWidget = ({
     }
   };
 
-  // Function to send text to backend
+  // Function to send text to backend - backend is deployed on hugging-face
   const sendTextToBackend = async (selectedText) => {
     setIsLoading(true);
 
